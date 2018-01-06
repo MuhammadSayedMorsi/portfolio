@@ -61,7 +61,7 @@ h2 {
     }
   }
   .case_item {
-    background-color: #35936c;
+    // background-color: #35936c;
     color: #ffffff;
     flex: 1 50%;
     text-align: left;
@@ -120,6 +120,10 @@ h2 {
     }
     .movie {
       background-color: #bc5953;
+    }
+    .food {
+      background-color: #86a9a5;
+      z-index: -1;
     }
     //span
     .button_image_overlay {

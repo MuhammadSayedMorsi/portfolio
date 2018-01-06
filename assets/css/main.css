@@ -362,7 +362,6 @@ h2 {
       .case_items .section__header {
         font-size: 106px; } }
   .case_items .case_item {
-    background-color: #35936c;
     color: #ffffff;
     -webkit-box-flex: 1;
     -webkit-flex: 1 50%;
@@ -434,6 +433,9 @@ h2 {
       background-color: #d1e1e0; }
     .case_items .case_item .movie {
       background-color: #bc5953; }
+    .case_items .case_item .food {
+      background-color: #86a9a5;
+      z-index: -1; }
     .case_items .case_item .button_image_overlay {
       position: absolute;
       top: 0;
