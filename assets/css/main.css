@@ -918,7 +918,7 @@ a {
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: #1c1d25;
+          background-color: #1f4954;
           -webkit-transition: 0.4s cubic-bezier(0.52, 0.01, 0.16, 1);
           -o-transition: 0.4s cubic-bezier(0.52, 0.01, 0.16, 1);
           transition: 0.4s cubic-bezier(0.52, 0.01, 0.16, 1);
@@ -1107,7 +1107,7 @@ a {
   .footer .content {
     max-width: 1150px;
     margin: 0 auto;
-    background: #1c1d25; }
+    background: #1f4954; }
     @media (max-width: 800px) {
       .footer .content {
         padding-right: 50px;
