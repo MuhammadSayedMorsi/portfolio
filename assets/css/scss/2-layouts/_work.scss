@@ -1,0 +1,225 @@
+a {
+  color: #1c1d25;
+  text-decoration: none;
+}
+.experiments-section {
+  width: 100%;
+  display: block;
+  padding-top: 40px;
+  position: relative;
+
+  .inner-container {
+    width: 100%;
+    position: relative;
+    .section-text-mask {
+      display: block;
+      overflow: hidden;
+      //experiment&opensource
+      .section-subtitle {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: #000000;
+        margin-bottom: 25px;
+      }
+        //web is fun
+        .section-title {
+          text-align: center;
+          margin-bottom: 70px;
+          color: #4a4a4a;
+        }
+
+    }
+
+    .inner-container {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      //the link
+     .experiment {
+       backface-visibility: hidden;
+       display: block;
+       float: left;
+       clear: none;
+       width: 25%;
+       margin-left: 0;
+       margin-right: 0;
+       height: 418px;
+       position: relative;
+       overflow: hidden;
+       text-align: center;
+       background-color: #ffffff;
+       box-shadow: 0 20px 60px 0 rgba(0, 0, 0, .15);
+       transition: all .4s ease;
+       @media (max-width: 64em) {
+         height: 320px;
+       }
+       @media (max-width:51.875em) {
+
+         float:left;
+         clear:none;
+         width:50%;
+         margin-left:0;
+         margin-right:0
+
+       }
+       @media (max-width:31.25em) {
+
+         display:block;
+         clear:both;
+         float:none;
+         width:100%;
+         margin-right:auto
+       }
+
+       ////////////////
+       .experiment-mask {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: #1c1d25;
+         transition: .4s cubic-bezier(.52, .01, .16,1);
+         transform: scaleX(0);
+         transform-origin: 0 0;
+         z-index: 1;
+         &:hover {
+           transform: scaleX(1);
+           transition-delay: .25s;
+         }
+       }
+       .experiment-number-mask {
+         display: none;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         overflow: hidden;
+         z-index: 0;
+         //span
+         span {
+           position: absolute;
+           top: 10px;
+           color: red;
+           right: -20px;
+           line-height: 1;
+           font-size: 8.125em;
+           opacity: 0.45;
+         }
+       }
+       .experiment-circle {
+         display: block;
+         position: relative;
+         width: 100%;
+         z-index: 10;
+         .experiment-image {
+           width: 230px;
+           height: 230px;
+           background-color: #1c1d25;
+           border-radius: 50%;
+           display: block;
+           margin: 45px auto 30px;
+           box-shadow: 0 15px 40px 1px rgba(0,0,0,.15);
+           background-position: 50%;
+           background-size: cover;
+           background-repeat: no-repeat;
+           transform: scale(1);
+          transition: transform .3s ease;
+         }
+       }
+       &:first-child .experiment-image {
+         background-image: url(../img/exp-1.PNG);
+       }
+       &:nth-child(2) .experiment-image {
+        background-image: url(../img/exp-2.PNG);
+      }
+      &:nth-child(3) .experiment-image {
+        background-image: url(../img/exp-3.PNG);
+      }
+      &:nth-child(4) .experiment-image {
+        background-image: url(../img/exp-4.PNG);
+      }
+
+       .experiment-title-area {
+         position: absolute;
+         top: 85%;
+         left: 12%;
+         text-align: left;
+         z-index: 10;
+
+         .experiment-title-label {
+           position: relative;
+           font-size: .625em;
+           text-transform: uppercase;
+           letter-spacing: 1px;
+           font-weight: 700;
+           &::before {
+             content: "";
+             position: absolute;
+             top: .8em;
+             left: -12px;
+             height: 1px;
+             background-color: #1c1d25;
+             width: 7px;
+           }
+         }
+         .experiment-title {
+          font-size: .75em;
+        }
+      }
+       .experiment-number-area {
+         position: absolute;
+         top: 90%;
+         right: 10%;
+         transform: rotate(90deg);
+         z-index: 10;
+         &::before {
+           content: "";
+           top: 45%;
+           height: 2px;
+           background-color: #1c1d25;
+           width: 30px;
+         }
+         &::after {
+           position: absolute;
+           transform-origin: 100% 100%;
+           right: 112%;
+           transition: .45s cubic-bezier(.52,.01,.16,1);
+         }
+         &::before {
+          position: absolute;
+          transform-origin: 100% 100%;
+          right: 112%;
+          transition: .45s cubic-bezier(.52,.01,.16,1);
+         }
+         &::after {
+          top:5px;
+          content:'01';
+          text-align:right;
+          font-size:8px;
+          font-weight:700;
+          padding-right:40px
+         }
+       }
+       //the_hover_effect..
+       &:hover .experiment-mask {
+        transform:scaleX(1);
+        transition-delay:.25s
+       }
+       &:hover .experiment-image {
+        transform:scale(1.08)
+       }
+       &:hover .experiment-number-area:before {
+        transform:scaleX(1.3)
+       }
+       &:hover .experiment-number-area:after {
+        transform:translateX(-15px);
+        transition-delay:.12s
+       }
+     }
+    }
+  }
+}
